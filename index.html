@@ -9,12 +9,94 @@
     <!-- global setting -->
     <link rel="stylesheet" href="css/root.css">
 
+    <!-- NAV -->
+    <link rel="stylesheet" href="css/nav.css">
+
     <!-- MEMORIES -->
     <link rel="stylesheet" href="css/memories.css">
+
 
 </head>
 
 <body>
+
+    <div class="overlay"></div>
+    <header>
+        <nav>
+            <div class="menu no-select">
+                <input type="checkbox" hidden id="menu-toggle">
+                <label for="menu-toggle" class="menu">
+                    <div class="menu-toggle">
+                        <span class="open-menu">MENU</span>
+                        <span class="close-menu">CLOSE</span>
+                    </div>
+                    <svg class="burger" width="14" height="7" viewBox="0 0 15 8" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6H14" stroke="currentColor" stroke-width="2" />
+
+                        <line y1="1" x2="14" y2="1" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </label>
+            </div>
+        </nav>
+        <div class="expand-menu">
+            <div class="menu-list">
+                <ul>
+                    <li class="item active">
+                        <div class="block"></div>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">How long ...</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Our Months</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Gallery</a>
+                    </li>
+                    
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Favorite pictures</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Songs that ...</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Reasons why ...</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Our firsts</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">For you</a>
+                    </li>
+
+                    <li class="item">
+                        <div class="block"></div>
+                        <a href="#">Letter for future us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
     <section id="memories">
         <div class="memories">
             <div class="heading">
@@ -39,8 +121,7 @@
                 </div>
             </div>
 
-            <!-- REUSABLE CARD COMPONENT -->
-            <!-- cloned by js -->
+            <!-- REUSABLE CARD COMPONENT FOR GALLERY-->
             <template id="memoryCardTemplate">
                 <div class="memory-card" role="button" tabindex="0">
                     <img class="memory-card__image" src="" alt="">
@@ -68,6 +149,7 @@
     </div>
 
     <script type="module" src="js/memories.js"></script>
+    <script type="module" src="js/nav.js"></script>
 
 </body>
 

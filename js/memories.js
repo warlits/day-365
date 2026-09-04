@@ -1,10 +1,10 @@
-import { memories } from "./data/memories-data.js";
+import { sortedMemories } from "./data/memories-data.js";
 
 function renderGallery() {
     const grid = document.getElementById("galleryGrid");
     const template = document.getElementById("memoryCardTemplate");
 
-    memories.forEach((memory, index) => {
+    sortedMemories.forEach((memory, index) => {
         const card = template.content.cloneNode(true);
 
         const img = card.querySelector(".memory-card__image");
@@ -51,14 +51,14 @@ function initModal() {
     }
 
     function openRandomMemory() {
-        const randomIndex = Math.floor(Math.random() * memories.length);
-        openModal(memories[randomIndex]);
+        const randomIndex = Math.floor(Math.random() * sortedMemories.length);
+        openModal(sortedMemories[randomIndex]);
     }
 
     grid.addEventListener("click", (event) => {
         const card = event.target.closest(".memory-card");
         if (!card) return;
-        openModal(memories[card.dataset.index]);
+        openModal(sortedMemories[card.dataset.index]);
     });
 
     grid.addEventListener("keydown", (event) => {
@@ -66,7 +66,7 @@ function initModal() {
         if (!card) return;
         if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
-            openModal(memories[card.dataset.index]);
+            openModal(sortedMemories[card.dataset.index]);
         }
     });
 

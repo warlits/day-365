@@ -1,5 +1,5 @@
 .memories {
-    padding: 25px 25px
+    padding-inline: 15px 25px;
 }
 
 .memories h1{
@@ -20,7 +20,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
+    gap: .5rem;
     margin-top: 2rem;
     display: relative;
     padding-bottom: 80px;

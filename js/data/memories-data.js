@@ -53,4 +53,14 @@ export const memories = [
         date: "November 11, 2025",
         description: "these are as beautiful as you"
     },
+    {
+        image: "assets/images/memories/hule.jpg",
+        title: "sapol",
+        date: "March 5, 2026",
+        description: "hahahha hulee"
+    },
 ];
+
+export const sortedMemories = [...memories].sort(
+    (a, b) => new Date(a.date) - new Date(b.date)
+);
