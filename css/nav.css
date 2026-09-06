@@ -52,7 +52,8 @@ nav {
     margin-top: 5px;
     align-self: center;
 
-    transition: margin .3s ease;
+    transition: all .3s ease;
+    transition-delay: 300ms;
 }
 
 .menu {
@@ -63,7 +64,7 @@ nav {
     gap: 10px;
 }
 
-.menu-toggle{
+.menu-toggle {
     display: flex;
     flex-direction: column;
     transform: translateY(9px);
@@ -71,14 +72,45 @@ nav {
     font-size: .7rem;
 }
 
-.menu-toggle .close-menu{
+.menu-toggle .close-menu {
     visibility: hidden;
+}
+
+.burger {
+    overflow: visible;
+}
+
+.burger path,
+.burger line {
+    transition: transform .2s ease;
+}
+
+.burger path {
+    transform-origin: 7px 6px;
+}
+
+.burger line {
+    transform-origin: 7px 1px;
 }
 
 .menu-list {
     opacity: 0;
     transition: opacity .3s ease;
     transition-delay: 280ms;
+    transform: translateX(-30px);
+}
+
+.menu-list .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-list .block {
+    background-color: var(--accent-hot);
+    height: 10px;
+    width: 10px;
+    opacity: 0;
 }
 
 .expand-menu {
@@ -91,12 +123,19 @@ nav {
     opacity: 0;
     overflow: hidden;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-color: var(--bg-cool);
     z-index: 300;
     margin-top: var(--nav-gap);
     padding: 0px 30px;
 
-    transition: height .3s ease, opacity .3s ease;
+    border-radius: 10px;
+
+    transition: height .5s ease, opacity .3s ease;
+    transition-delay: 250ms;
 }
 
 
@@ -116,31 +155,61 @@ nav {
 .menu-open nav {
     background-color: var(--bg-cool);
     margin-inline: var(--nav-gap);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px; */
+    /* border-top-right-radius: 10px; */
+    border-radius: 10px;
     margin-top: var(--nav-gap);
 }
 
 .menu-open .expand-menu {
-    height: 70svh;
+    height: 75svh;
     padding: 10px 30px;
     opacity: 1;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
 }
 
 .menu-open .menu-list {
     opacity: 1;
 }
 
-.menu-open .menu-toggle  {
-    transform: translateY(-9px);
+.menu-open .menu-toggle {
+    transform: translateY(-10px);
 }
 
-.menu-open .open-menu  {
+.menu-open .open-menu {
     visibility: hidden;
 }
 
 .menu-open .close-menu {
     visibility: visible;
+}
+
+.menu-open .burger path {
+    transform: translateY(-2.5px) rotate(45deg);
+}
+
+.menu-open .burger line {
+    transform: translateY(2.5px) rotate(-45deg);
+}
+
+
+
+/* ==========================================================================
+   MENU  OPEN > LIST ITEM ACTIVE STATE
+   ========================================================================== */
+
+.menu-list .active {
+    color: var(--accent-hot);
+    font-weight: 700;
+    font-family: var(--font-accent);
+    transform: translateX(30px);
+
+    transition: transform .3s ease;
+}
+
+.menu-list .active .block {
+    opacity: 1;
+    transform: rotate(360deg);
+    transition: opacity .3s ease, transform .3s ease;
 }

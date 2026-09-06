@@ -40,9 +40,9 @@
             </div>
         </nav>
         <div class="expand-menu">
-            <div class="menu-list">
+            <div class="menu-list no-select">
                 <ul>
-                    <li class="item active">
+                    <li class="item">
                         <div class="block"></div>
                         <a href="#">Home</a>
                     </li>
@@ -52,7 +52,7 @@
                         <a href="#">How long ...</a>
                     </li>
 
-                    <li class="item">
+                    <li class="item active">
                         <div class="block"></div>
                         <a href="#">Our Months</a>
                     </li>
@@ -61,7 +61,7 @@
                         <div class="block"></div>
                         <a href="#">Gallery</a>
                     </li>
-                    
+
                     <li class="item">
                         <div class="block"></div>
                         <a href="#">Favorite pictures</a>
@@ -96,43 +96,57 @@
         </div>
     </header>
 
-
-    <section id="memories">
-        <div class="memories">
-            <div class="heading">
-                <h1>
-                    Memories
-                </h1>
-                <p>
-                    we've been through a LOT, my love. let's look back on our favorite memories here.
-                </p>
-            </div>
-            <div class="gallery" id="galleryGrid">
-                <div class="floating-buttons">
-                    <button class="random-memory-btn" type="button" id="randomMemoryBtn">
-                        <span aria-hidden="true"> 🎲 </span> Relive a random moment
-                    </button>
-                    <button class="back-to-top-btn" type="button" id="backToTopBtn" aria-label="Back to top">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
-                            <path fill="currentColor"
-                                d="M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25Zm5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.749.749 0 0 1 1.06 0Z" />
-                        </svg>
-                    </button>
+    <!-- PAGES -->
+    <div class="page-wrapper" id="pageWrapper">
+        <section class="page" data-page="memories">
+            <div class="memories">
+                <div class="next-page-btn" id="nextPageBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M10.02 6L8.61 7.41L13.19 12l-4.58 4.59L10.02 18l6-6l-6-6z" />
+                    </svg>
                 </div>
-            </div>
-
-            <!-- REUSABLE CARD COMPONENT FOR GALLERY-->
-            <template id="memoryCardTemplate">
-                <div class="memory-card" role="button" tabindex="0">
-                    <img class="memory-card__image" src="" alt="">
-                    <div class="memory-card__overlay">
-                        <p class="memory-card__title"></p>
+                <div class="heading">
+                    <h1>
+                        Memories
+                    </h1>
+                    <p>
+                        we've been through a LOT, my love. let's look back on our favorite memories here.
+                    </p>
+                </div>
+                <div class="gallery" id="galleryGrid">
+                    <div class="floating-buttons">
+                        <button class="random-memory-btn" type="button" id="randomMemoryBtn">
+                            <span aria-hidden="true"> 🎲 </span> Relive a random moment
+                        </button>
+                        <button class="back-to-top-btn" type="button" id="backToTopBtn" aria-label="Back to top">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                <path fill="currentColor"
+                                    d="M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25Zm5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.749.749 0 0 1 1.06 0Z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </template>
+
+                <!-- REUSABLE CARD COMPONENT FOR GALLERY-->
+                <template id="memoryCardTemplate">
+                    <div class="memory-card" role="button" tabindex="0">
+                        <img class="memory-card__image" src="" alt="">
+                        <div class="memory-card__overlay">
+                            <p class="memory-card__title"></p>
+                        </div>
+                    </div>
+                </template>
 
 
-    </section>
+        </section>
+
+        <section class="page" data-page="favePics">
+            <div class="fave-pics">
+
+            </div>
+        </section>
+    </div>
+
     <!-- MODAL FRAME -->
     <div class="memory-modal" id="memoryModal" aria-hidden="true">
         <div class="memory-modal__backdrop" id="modalBackdrop"></div>
