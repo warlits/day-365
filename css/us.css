@@ -1,2 +1,171 @@
+.us {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.us .heading h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font-accent);
+    font-weight: 900;
+}
+
+.us .heading .subtext {
+    text-align: center;
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.us .heading .subtext p {
+    text-align: center;
+}
+
+.us .heading .subtext .date {
+    font-size: 2.3rem;
+    font-family: var(--font-script);
+    line-height: 1.2;
+    color: var(--accent-gold);
+    font-weight: 900;
+}
+
+.time-together__counter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem clamp(1.25rem, 4vw, 3rem);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.counter-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 4.5rem;
+}
+
+.counter-block__number {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+    font-weight: 600;
+    color: var(--accent-gold);
+    line-height: 1;
+}
+
+.counter-block__label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    /* margin-top: 0.6rem; */
+}
+
+.us .bottom-text {
+    text-align: center;
+    font-family: var(--font-script);
+    font-size: 1.2rem;
+}
+
+.bottom-canvas {
+    overflow: visible;
+}
+
+.bottom-canvas img {
+    position: absolute;
+    height: 300px;
+    width: auto;
+    bottom: 0px;
+
+    filter:
+        drop-shadow(4px 0 0 white) drop-shadow(-4px 0 0 white) drop-shadow(0 4px 0 white) drop-shadow(0 -4px 0 white) drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(8px 12px 10px rgba(0, 0, 0, 0.25));
+
+    animation-delay: .6s;
+}
+
+.bottom-canvas .carl {
+    transform: translateX(170px) translateY(62px);
+    visibility: hidden;
+}
+
+.page.active .bottom-canvas .carl {
+    animation: enterCarl 0.8s steps(4, end) forwards;
+}
+
+@keyframes enterCarl {
+
+    /* Starting off-screen */
+    0% {
+        visibility: hidden;
+        transform: translateX(350px) translateY(62px) rotate(0deg);
+    }
+
+    /* Step 1 */
+    25% {
+        visibility: visible;
+        transform: translateX(305px) translateY(62px) rotate(-10deg);
+    }
+
+    /* Step 2 */
+    50% {
+        transform: translateX(260px) translateY(62px) rotate(10deg);
+    }
+
+    /* Step 3 */
+    75% {
+        transform: translateX(215px) translateY(62px) rotate(-9deg);
+    }
+
+    /* Step 4 — final position */
+    100% {
+        visibility: visible;
+        transform: translateX(170px) translateY(62px) rotate(0deg);
+    }
+
+}
 
 
+.bottom-canvas .shula {
+    left: -10px;
+    bottom: -50px;
+    visibility: hidden;
+}
+
+.page.active .bottom-canvas .shula {
+    animation: enterShula 0.8s steps(4, end) forwards;
+}
+
+@keyframes enterShula {
+
+    /* Starting off-screen */
+    0% {
+        visibility: hidden;
+        transform: translateX(-180px) rotate(0deg);
+    }
+
+    /* Step 1 */
+    25% {
+        visibility: visible;
+        transform: translateX(-135px) rotate(10deg);
+    }
+
+    /* Step 2 */
+    50% {
+        transform: translateX(-90px) rotate(-10deg);
+    }
+
+    /* Step 3 */
+    75% {
+        transform: translateX(-45px) rotate(9deg);
+    }
+
+    /* Step 4 — final position */
+    100% {
+        visibility: visible;
+        transform: translateX(0) rotate(0deg);
+    }
+
+}

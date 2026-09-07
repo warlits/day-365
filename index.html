@@ -12,6 +12,9 @@
     <!-- NAV -->
     <link rel="stylesheet" href="css/nav.css">
 
+    <!-- HOME -->
+    <link rel="stylesheet" href="css/home.css">
+
     <!-- US -->
     <link rel="stylesheet" href="css/us.css">
 
@@ -103,38 +106,92 @@
     <!-- <div class="slider-viewport"> -->
     <div class="page-wrapper" id="pageWrapper">
 
-        <section class="page home-section" data-page="home"
-        data-nav-color  = "var(--bg-primary)"
-        >
+        <section class="page home-section" data-page="home" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="home">
-                    <h1>
-                        Our Story
-                    </h1>
+                    <div class="home-headline">
+                        <div class="date">
+                            <h1>
+                                09.13.26
+                            </h1>
+                        </div>
+                        <div class="headline">
+                            <h1>
+                                and somewhere along the way
+                            </h1>
+                            <p>
+                                we became us.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="next-page-btn" id="nextPageBtn" data-next>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10.02 6L8.61 7.41L13.19 12l-4.58 4.59L10.02 18l6-6l-6-6z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="page us-section" data-page="us"
-        data-nav-color  = "var(--bg-secondary)"
-        >
+        <section class="page" data-page="us" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="us">
                     <div class="heading">
                         <h1>
                             Our Time Together
                         </h1>
-                        <p>
-                            it has been a year. weve been through ups and downs. but look at us, still here.
-                        </p>
+                        <div class="subtext">
+                            <p>Since</p>
+                            <span class="date">
+                                September 13, 2025
+                            </span>
+                            <p>
+                                and we haven't stopped counting since
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="time-together__counter" aria-hidden="true">
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-years">00</span>
+                            <span class="counter-block__label">Years</span>
+                        </div>
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-months">00</span>
+                            <span class="counter-block__label">Months</span>
+                        </div>
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-days">00</span>
+                            <span class="counter-block__label">Days</span>
+                        </div>
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-hours">00</span>
+                            <span class="counter-block__label">Hours</span>
+                        </div>
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-minutes">00</span>
+                            <span class="counter-block__label">Minutes</span>
+                        </div>
+                        <div class="counter-block">
+                            <span class="counter-block__number" id="tt-seconds">00</span>
+                            <span class="counter-block__label">Seconds</span>
+                        </div>
+                    </div>
+
+                    <p class="bottom-text">... and the most beautiful part? <br>
+                        we're still counting. ♡
+                    </p>
+                </div>
+                <div class="bottom-canvas">
+                    <img src="assets/images/memories/carl.png" alt="" class="carl animate">
+                    <img src="assets/images/memories/shula.png" alt="" class="shula">
                 </div>
             </div>
         </section>
 
-        <section class="page timeline-section" data-page="timeline"
-        data-nav-color  = "var(--bg-cool)"
-        >
+        <section class="page timeline-section" data-page="timeline" data-nav-color="var(--bg-cool)">
             <div class="page-scroll">
                 <div class="timeline">
                     <div class="heading">
@@ -146,9 +203,7 @@
             </div>
         </section>
 
-        <section class="page gallery-section" data-page="gallery"
-        data-nav-color  = "var(--bg-primary)"
-        >
+        <section class="page gallery-section" data-page="gallery" data-nav-color="var(--bg-primary)">
             <div class="page-controls">
                 <!--                 <div class="next-page-btn" id="nextPageBtn" data-next>
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
@@ -195,9 +250,7 @@
             </div>
         </section>
 
-        <section class="page favorites-section" data-page="favorites"
-        data-nav-color  = "var(--bg-secondary)"
-        >
+        <section class="page favorites-section" data-page="favorites" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="favorites">
                     <div class="heading">
@@ -209,9 +262,7 @@
             </div>
         </section>
 
-        <section class="page songs-section" data-page="songs"
-        data-nav-color  = "var(--bg-primary)"
-        >
+        <section class="page songs-section" data-page="songs" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="songs">
                     <div class="heading">
@@ -223,9 +274,7 @@
             </div>
         </section>
 
-        <section class="page reasons-section" data-page="reasons"
-        data-nav-color  = "var(--bg-secondary)"
-        >
+        <section class="page reasons-section" data-page="reasons" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="reasons">
                     <div class="heading">
@@ -237,9 +286,7 @@
             </div>
         </section>
 
-        <section class="page firsts-section" data-page="firsts"
-        data-nav-color  = "var(--bg-cool)"
-        >
+        <section class="page firsts-section" data-page="firsts" data-nav-color="var(--bg-cool)">
             <div class="page-scroll">
                 <div class="firsts">
                     <div class="heading">
@@ -251,9 +298,7 @@
             </div>
         </section>
 
-        <section class="page openLetter-section" data-page="openLetter"
-        data-nav-color  = "var(--text-primary)"
-        >
+        <section class="page openLetter-section" data-page="openLetter" data-nav-color="var(--text-primary)">
             <div class="page-scroll">
                 <div class="open-letter">
                     <div class="heading">
@@ -265,9 +310,7 @@
             </div>
         </section>
 
-        <section class="page future-section" data-page="future"
-        data-nav-color  = "var(--bg-primary)"
-        >
+        <section class="page future-section" data-page="future" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="future">
                     <div class="heading">
@@ -299,6 +342,7 @@
     <script type="module" src="js/memories.js"></script>
     <script type="module" src="js/nav.js"></script>
     <script src="js/next-page.js"></script>
+    <script src="js/data/time-together.js"></script>
 
 </body>
 

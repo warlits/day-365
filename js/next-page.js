@@ -1,12 +1,25 @@
-const pageOrder = ["home", "us", "timeline", "gallery", "favorites", "songs", "reasons", "firsts", "openLetter", "future"];
+const pageOrder = [
+    "home",
+    "us",
+    "timeline",
+    "gallery",
+    "favorites",
+    "songs",
+    "reasons",
+    "firsts",
+    "openLetter",
+    "future"
+];
 
 let currentPageIndex = 0;
 
 const pageWrapper = document.getElementById("pageWrapper");
 const menuItems = document.querySelectorAll(".menu-list li");
+const pages = document.querySelectorAll(".page");
 
 
 function goToPage(pageName) {
+
     const index = pageOrder.indexOf(pageName);
 
     if (index === -1) return;
@@ -15,40 +28,63 @@ function goToPage(pageName) {
 
     updateSlidePosition();
     updateActiveMenuItem();
+
 }
 
 
 function goToNextPage() {
+
     if (currentPageIndex < pageOrder.length - 1) {
+
         currentPageIndex++;
 
         updateSlidePosition();
         updateActiveMenuItem();
+
     }
+
 }
 
 
 function goToPrevPage() {
+
     if (currentPageIndex > 0) {
+
         currentPageIndex--;
 
         updateSlidePosition();
         updateActiveMenuItem();
+
     }
+
 }
 
 
-/* function updateSlidePosition() {
-    pageWrapper.style.transform =
-        `translateX(-${currentPageIndex * 100}vw)`;
-} */
-
 function updateSlidePosition() {
+
     pageWrapper.scrollTo({
         left: currentPageIndex * window.innerWidth,
         behavior: "smooth"
     });
+
 }
+
+
+function updateActivePage() {
+
+    const currentPageName = pageOrder[currentPageIndex];
+
+    pages.forEach((page) => {
+
+        page.classList.toggle(
+            "active",
+            page.dataset.page === currentPageName
+        );
+
+    });
+
+}
+
 
 function updateActiveMenuItem() {
 
@@ -56,49 +92,68 @@ function updateActiveMenuItem() {
 
     menuItems.forEach((item) => {
 
-        const isActive =
-            item.dataset.page === currentPageName;
-
-        item.classList.toggle("active", isActive);
+        item.classList.toggle(
+            "active",
+            item.dataset.page === currentPageName
+        );
 
     });
 
 }
 
 
-// MENU CLICKS
+/* MENU CLICKS */
+
 menuItems.forEach((item) => {
+
     item.addEventListener("click", () => {
+
         goToPage(item.dataset.page);
+
     });
+
 });
 
 
-// NEXT BUTTONS
+/* NEXT BUTTONS */
+
 document.querySelectorAll("[data-next]").forEach((btn) => {
+
     btn.addEventListener("click", goToNextPage);
+
 });
 
 
-// PREVIOUS BUTTONS
+/* PREVIOUS BUTTONS */
+
 document.querySelectorAll("[data-prev]").forEach((btn) => {
+
     btn.addEventListener("click", goToPrevPage);
+
 });
 
 
-/* =====================================
-   TRACK SWIPE / HORIZONTAL SCROLL
-===================================== */
+/* INITIAL PAGE */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    updateActivePage();
+    updateActiveMenuItem();
+
+});
+
+
+/* ACTIVATE PAGE AFTER SCROLLING */
 
 pageWrapper.addEventListener("scrollend", () => {
+
     const pageWidth = pageWrapper.clientWidth;
 
-    const newIndex = Math.round(
+    currentPageIndex = Math.round(
         pageWrapper.scrollLeft / pageWidth
     );
 
-    if (newIndex !== currentPageIndex) {
-        currentPageIndex = newIndex;
-        updateActiveMenuItem();
-    }
+    updateActiveMenuItem();
+    updateActivePage();
+
 });

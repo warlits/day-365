@@ -57,6 +57,8 @@ nav {
     transition:
         margin 0.3s ease,
         border-radius 0.3s ease;
+    
+    transition-delay: 300ms;
 
 }
 
