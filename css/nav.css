@@ -1,10 +1,4 @@
-header {
-    position: relative;
-    z-index: 300;
-    --nav-gap: 7px;
 
-    transition: transform .3s ease;
-}
 
 .no-select {
     user-select: none;
@@ -18,7 +12,6 @@ header {
    ========================================================================== */
 
 .overlay {
-    touch-action: none;
     display: block;
     position: fixed;
     inset: 0;
@@ -34,6 +27,7 @@ header {
 }
 
 .menu-open .overlay {
+    touch-action: none;
     opacity: 1;
     visibility: visible;
 }
@@ -47,13 +41,23 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+
     overflow: visible;
+
     padding: 0px 25px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+
     align-self: center;
 
-    transition: all .3s ease;
-    transition-delay: 300ms;
+    /* background-color: var(--nav-bg); */
+    background-color: transparent;
+    pointer-events: auto;
+
+
+    transition:
+        margin 0.3s ease,
+        border-radius 0.3s ease;
+
 }
 
 .menu {
@@ -165,6 +169,7 @@ nav {
     height: 75svh;
     padding: 10px 30px;
     opacity: 1;
+    pointer-events: auto;
     /* border-bottom-left-radius: 10px; */
     /* border-bottom-right-radius: 10px; */
 }
@@ -205,7 +210,7 @@ nav {
     font-family: var(--font-accent);
     transform: translateX(30px);
 
-    transition: transform .3s ease;
+    transition: transform .3s ease, font-family .3s ease;
 }
 
 .menu-list .active .block {

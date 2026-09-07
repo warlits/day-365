@@ -76,30 +76,78 @@ function initModal() {
 }
 
 function initBackToTop() {
-    const btn = document.getElementById("backToTopBtn");
-    const buttonsWrapper = document.querySelector(".floating-buttons");
+    const galleryPage = document.querySelector(
+        '.page[data-page="gallery"]'
+    );
+
+    const btn = galleryPage.querySelector("#backToTopBtn");
+
+    const buttonsWrapper = galleryPage.querySelector(
+        ".floating-buttons"
+    );
+
+    const nextPageBtn = galleryPage.querySelector(
+        ".next-page-btn"
+    );
+
+    const scrollContainer = galleryPage.querySelector(
+        ".page-scroll"
+    );
+
+    console.log("Gallery page:", galleryPage);
+    console.log("Scroll container:", scrollContainer);
+
     const SCROLL_THRESHOLD = 100;
 
     function toggleVisibility() {
-        if (window.scrollY > SCROLL_THRESHOLD) {
+
+        console.log("SCROLL:", scrollContainer.scrollTop);
+
+        if (scrollContainer.scrollTop > SCROLL_THRESHOLD) {
+
             btn.classList.add("is-visible");
             buttonsWrapper.classList.add("is-visible");
+            nextPageBtn.classList.add("is-visible");
+
         } else {
+
             btn.classList.remove("is-visible");
             buttonsWrapper.classList.remove("is-visible");
+            nextPageBtn.classList.remove("is-visible");
+
         }
     }
 
     function scrollToTop() {
-        window.scrollTo({
+
+        scrollContainer.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     }
 
-    window.addEventListener("scroll", toggleVisibility);
+    scrollContainer.addEventListener("scroll", toggleVisibility);
+
     btn.addEventListener("click", scrollToTop);
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const memories = document.querySelector('.memories');
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            memories.classList.add('is-active');
+        });
+    });
+
+    setTimeout(() => {
+        memories.classList.remove('is-active');
+    }, 2500)
+})
+
+
+
 
 export function initMemories() {
     renderGallery();

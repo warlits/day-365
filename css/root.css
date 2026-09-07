@@ -7,6 +7,7 @@
    ROOT TOKENS
    ========================================================================== */
 :root {
+    --nav-bg: #1A1025;
     /* --- Color: backgrounds --- */
     --bg-primary: #1A1025;
     /* deep plum — default page bg */
@@ -37,10 +38,12 @@
     --gradient-cool: linear-gradient(135deg, var(--bg-cool), var(--accent-hot));
 
     /* --- Typography: families --- */
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Manrope', sans-serif;
-  --font-accent: 'Playfair Display', serif;   /* italic-only, for classy quotes/labels */
-  --font-script: 'Caveat', cursive;            /* handwritten, for personal notes */
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+    /* italic-only, for classy quotes/labels */
+    --font-script: 'Caveat', cursive;
+    /* handwritten, for personal notes */
 
     /* --- Typography: sizes (mobile-first) --- */
     --fs-hero: clamp(2.5rem, 10vw, 4rem);
@@ -97,7 +100,7 @@ body {
     font-size: var(--fs-body);
     line-height: var(--lh-body);
     color: var(--text-primary);
-    background: var(--bg-primary);
+    /* background: var(--bg-primary); */
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
@@ -188,19 +191,174 @@ h2,
     height: 100svh;
 }
 
-/* ==========================================================================
-   GLOBAL PAGE ORIENTATION
-   ========================================================================== */
+/* ========================================================================== */
+/* GLOBAL SCROLL LOCK                                                        */
+/* ========================================================================== */
 
-.page-wrapper{
-    display: flex;
+html,
+body {
     width: 100%;
-    height: 100vh;
-    transition: transform .4s ease;
+    height: 100svh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    background-color: transparent;
 }
 
+/* ========================================================================== */
+/* NAV POS LOCK                                                        */
+/* ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 300;
+    --nav-gap: 7px;
+    pointer-events: none;
+}
+
+/* ========================================================================== */
+/* PAGE WRAPPER                                                              */
+/* ========================================================================== */
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100svh;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+    transition: transform .2s ease;
+}
+
+
+/* ========================================================================== */
+/* INDIVIDUAL PAGE                                                           */
+/* ========================================================================== */
+
 .page {
+    position: relative;
+
     flex-shrink: 0;
+
+    width: 100vw;
+    height: 100svh;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    contain: layout;
+    padding-inline: 15px;
+    padding-top: 40px;
+}
+
+
+/* ========================================================================== */
+/* PAGE CONTROLS                                                             */
+/* ========================================================================== */
+
+.page-controls {
+    position: absolute;
+    inset: 0;
+
+    z-index: 50;
+
+    pointer-events: none;
+}
+
+.page-controls button,
+.page-controls .next-page-btn {
+    pointer-events: auto;
+}
+
+
+/* ========================================================================== */
+/* PAGE SCROLL                                                               */
+/* ========================================================================== */
+
+.page-scroll {
     width: 100%;
     height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ========================================================================== */
+/* HEADINGS                                                               */
+/* ========================================================================== */
+
+.heading h1{
+    font-size: 1.8rem;
+}
+
+.heading p {
+    line-height: .95;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: var(--font-script);
+}
+
+
+/* ==========================================================================
+   PAGE COLORS
+   ========================================================================== */
+
+.page[data-page="home"] {
+    --page-bg: #1A1025;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="us"] {
+    --page-bg: #2E1435;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="timeline"] {
+    --page-bg: #2E1F4D;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="gallery"] {
+    --page-bg: #1A1025;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="favorites"] {
+    --page-bg: #2E1435;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="songs"] {
+    --page-bg: #2E1F4D;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="reasons"] {
+    --page-bg: #1A1025;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="firsts"] {
+    --page-bg: #2E1435;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="openLetter"] {
+    --page-bg: #2E1F4D;
+    background-color: var(--page-bg);
+}
+
+.page[data-page="future"] {
+    --page-bg: #1A1025;
+    background-color: var(--page-bg);
 }

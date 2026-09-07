@@ -1,17 +1,8 @@
 .memories {
     position: relative;
-    padding-inline: 15px 25px;
-}
-
-.memories h1{
-    font-size: 2.3rem;
-}
-
-.memories .heading p {
-    line-height: .95;
-    text-align: justify;
-    font-size: 1.2rem;
-    font-family: var(--font-script);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* =============================== */
@@ -20,8 +11,8 @@
 
 .next-page-btn {
     position: fixed;
-    right: 10px;
-    top: 50vh;
+    right: 0px;
+    top: 400px;
     z-index: 50;
 
     background-color: var(--accent-hot);
@@ -29,15 +20,28 @@
     justify-content: center;
     align-items: center;
 
-    border-radius: 999px;
+    
+    /* border-radius: 999px; */
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    
+    opacity: 1;
 
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.memories.is-active .next-page-btn p {
+    display: block;
+    padding-left: 15px;
+    opacity: 1;
+}
+
+.next-page-btn.is-visible{
     transform: translateX(70px);
     opacity: 0;
 }
 
-.next-page-btn .is-visible{
-    transform: translateX(0);
-}
+
 
 /* =============================== */
 /* GALLERY GRID                    */
@@ -48,10 +52,10 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .5rem;
     margin-top: 2rem;
-    display: relative;
+    position: relative;
     padding-bottom: 100px;
 }
-.gallery button {
+.page-controls button {
     background-color: var(--accent-hot);
     padding: 0.75rem 1.25rem;
     /* padding: 0.75rem 1.25rem; */
@@ -64,38 +68,47 @@
     font-family: var(--font-body);
 }
 
-.gallery .floating-buttons {
+.page-controls .random-memory-btn{
+    display: flex;
+    gap: 5px;
+}
+
+.page-controls .floating-buttons {
     position: fixed;
     display: flex;
-    bottom: 45px;
+    bottom: 25px;
     right: 25px;
     z-index: 50;
     gap: 10px;
 
     transform: translateX(70px);
     transition: transform 0.3s ease;
+    padding-block: 20px;
 }
-
-.gallery .back-to-top-btn {
+.page-controls .back-to-top-btn {
     border-radius: 999px;
     height: 44px;
     width: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* opacity: 0; */
 }
 
-.gallery .back-to-top-btn svg{
+.page-controls .back-to-top-btn svg{
     flex-shrink: 0;
 }
 
 
-
-.gallery .floating-buttons.is-visible {
+.page-controls .floating-buttons.is-visible {
     transform: translateX(0);
 }
 
-.gallery button:active {
+.page-controls .floating-buttons .back-to-top-btn.is-visible {
+    opacity: 1;
+}
+
+.page-controls button:active {
     transform: scale(.96);
 }
 
