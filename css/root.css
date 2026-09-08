@@ -297,7 +297,7 @@ header {
 /* HEADINGS                                                               */
 /* ========================================================================== */
 
-.heading h1{
+.heading h1 {
     font-size: 1.8rem;
 }
 
@@ -361,4 +361,20 @@ header {
 .page[data-page="future"] {
     --page-bg: #1A1025;
     background-color: var(--page-bg);
+}
+
+html {
+    /* Keeps the ability to scroll vertically */
+    overflow-y: scroll;
+
+    /* IE and Edge Legacy */
+    -ms-overflow-style: none;
+
+    /* Firefox */
+    scrollbar-width: none;
+}
+
+/* Chrome, Safari, and newer Edge */
+html::-webkit-scrollbar {
+    display: none;
 }

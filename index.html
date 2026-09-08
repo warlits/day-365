@@ -18,6 +18,9 @@
     <!-- US -->
     <link rel="stylesheet" href="css/us.css">
 
+    <!-- TIMELINE -->
+    <link rel="stylesheet" href="css/timeline.css">
+
     <!-- MEMORIES -->
     <link rel="stylesheet" href="css/memories.css">
 
@@ -106,6 +109,9 @@
     <!-- <div class="slider-viewport"> -->
     <div class="page-wrapper" id="pageWrapper">
 
+        <!-- /* ==========================================================================
+        HOME
+        ========================================================================== */ -->
         <section class="page home-section" data-page="home" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="home">
@@ -135,6 +141,9 @@
             </div>
         </section>
 
+        <!-- /* ==========================================================================
+        OUR TIME TOGETHER
+        ========================================================================== */ -->
         <section class="page" data-page="us" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="us">
@@ -191,15 +200,51 @@
             </div>
         </section>
 
+
+        <!-- /* ==========================================================================
+        TIMELINE
+        ========================================================================== */ -->
         <section class="page timeline-section" data-page="timeline" data-nav-color="var(--bg-cool)">
             <div class="page-scroll">
+
+                <div class="back-to-top-btn" id="backToTopBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25Zm5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.749.749 0 0 1 1.06 0Z" />
+                    </svg>
+                    back to top
+                </div>
+
                 <div class="timeline">
                     <div class="heading">
                         <h1>
-                            Every Month With You
+                            One Month at a Time
                         </h1>
+                        <p class="subtext">
+                            A little piece of us, every month.
+                        </p>
                     </div>
+                    <div class="month-tile-list" id="monthTileList"></div>
                 </div>
+                <template id="month-tile-template">
+                    <article class="month-tile">
+                        <button class="month-tile__header" type="button" aria-expanded="false">
+                            <img class="month-tile__preview" alt="" />
+                            <div class="month-tile__meta">
+                                <span class="month-tile__number"></span>
+                                <h3 class="month-tile__title"></h3>
+                                <time class="month-tile__date"></time>
+                            </div>
+                            <span class="month-tile__chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="month-tile__panel">
+                            <div class="month-tile__panel-inner">
+                                <img class="month-tile__image" alt="" />
+                                <p class="month-tile__description"></p>
+                            </div>
+                        </div>
+                    </article>
+                </template>
             </div>
         </section>
 
@@ -228,7 +273,8 @@
                 <div class="memories">
                     <div class="heading">
                         <h1>
-                            The Moments We Kept
+                            <!-- The Moments We Kept -->
+                            Our Gallery of Us
                         </h1>
                         <p>
                             we've been through a LOT, my love. let's look back on our favorite memories here.
@@ -339,10 +385,16 @@
         </div>
     </div>
 
+    <!-- /* ==========================================================================
+    SCRIPTS
+    ========================================================================== */ -->
+
+    <script type="module" src="js/timeline.js"></script>
     <script type="module" src="js/memories.js"></script>
     <script type="module" src="js/nav.js"></script>
     <script src="js/next-page.js"></script>
     <script src="js/data/time-together.js"></script>
+
 
 </body>
 

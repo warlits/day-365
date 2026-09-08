@@ -94,9 +94,6 @@ function initBackToTop() {
         ".page-scroll"
     );
 
-    console.log("Gallery page:", galleryPage);
-    console.log("Scroll container:", scrollContainer);
-
     const SCROLL_THRESHOLD = 100;
 
     function toggleVisibility() {
