@@ -24,6 +24,13 @@
     <!-- MEMORIES -->
     <link rel="stylesheet" href="css/memories.css">
 
+    <!-- FAVORITES -->
+    <link rel="stylesheet" href="css/favorites.css">
+
+    <!-- SONGS -->
+    <link rel="stylesheet" href="css/songs.css">
+
+
 
 </head>
 
@@ -132,8 +139,9 @@
                     </div>
 
 
-                    <div class="next-page-btn" id="nextPageBtn" data-next>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
+                    <div class="next-page-btn" id="nextPageBtn" data-next data-play-song="0">
+                        remember with me
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M10.02 6L8.61 7.41L13.19 12l-4.58 4.59L10.02 18l6-6l-6-6z" />
                         </svg>
                     </div>
@@ -212,13 +220,13 @@
                         <path fill="currentColor"
                             d="M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25Zm5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.749.749 0 0 1 1.06 0Z" />
                     </svg>
-                    back to top
+                    back up!
                 </div>
 
                 <div class="timeline">
                     <div class="heading">
                         <h1>
-                            One Month at a Time
+                            A Month at a Time
                         </h1>
                         <p class="subtext">
                             A little piece of us, every month.
@@ -273,7 +281,7 @@
                 <div class="memories">
                     <div class="heading">
                         <h1>
-                            <!-- The Moments We Kept -->
+
                             Our Gallery of Us
                         </h1>
                         <p>
@@ -296,6 +304,11 @@
             </div>
         </section>
 
+
+
+        <!-- /* ==========================================================================
+        FAVORITES
+        ========================================================================== */ -->
         <section class="page favorites-section" data-page="favorites" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="favorites">
@@ -303,21 +316,114 @@
                         <h1>
                             My Favorite Things About Us
                         </h1>
+                        <p>
+                            the little things I never want to forget
+                        </p>
                     </div>
+                    <div class="favorites-wrapper" id="favoritesGrid"></div>
+                    <template id="favoritePolaroidTemplate">
+                        <article class="favorite-polaroid">
+                            <div class="favorite-polaroid__media">
+                                <img class="favorite-polaroid__image" alt="">
+                                <video class="favorite-polaroid__video" preload="metadata" playsinline></video>
+                                <button class="favorite-polaroid__play" type="button" aria-label="Play video">
+                                    ▶
+                                </button>
+                            </div>
+                            <div class="favorite-polaroid__caption">
+                                <h3 class="favorite-polaroid__title"></h3>
+                                <p class="favorite-polaroid__description"></p>
+                            </div>
+                        </article>
+                    </template>
                 </div>
             </div>
         </section>
 
+        <!-- /* ==========================================================================
+        SONGS
+        ========================================================================== */ -->
         <section class="page songs-section" data-page="songs" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="songs">
+
+                    <!-- PLAYLIST HEADER -->
                     <div class="heading">
-                        <h1>
-                            Our Songs
-                        </h1>
+
+                        <div class="album-cover">
+                            <img class="js-playlist-cover" src="/assets/images/memories/carnations.jpg"
+                                alt="Our Songs playlist cover">
+                        </div>
+
+                        <div class="title">
+                            <p class="playlist-type">
+                                Playlist
+                            </p>
+
+                            <h1 class="js-playlist-title">
+                                Our Songs
+                            </h1>
+
+                            <p class="js-song-count">
+                                0 songs
+                            </p>
+                        </div>
+
                     </div>
+
+
+                    <!-- SONG LIST -->
+                    <div class="song-list">
+
+                        <div class="labels">
+                            <p>#</p>
+                            <p>Title</p>
+                            <p>Duration</p>
+                        </div>
+
+                        <!-- SONGS GENERATED BY JS -->
+                        <div class="js-song-list" aria-label="Playlist songs"></div>
+
+                    </div>
+
                 </div>
             </div>
+
+
+            <!-- NOW PLAYING -->
+            <div class="now-playing js-now-playing">
+
+                <div class="song-info">
+
+                    <div class="album-cover">
+                        <img class="js-now-playing-cover" src="/assets/images/memories/carnations.jpg" alt="">
+                    </div>
+
+                    <div class="song">
+
+                        <p class="song-title js-now-playing-title">
+                            Select a song
+                        </p>
+
+                        <p class="artist js-now-playing-artist">
+                            —
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button class="play-btn js-play-btn" type="button" aria-label="Play" disabled>
+                    <span class="js-play-icon">▶</span>
+                </button>
+
+            </div>
+
+
+            <!-- SINGLE GLOBAL AUDIO PLAYER -->
+            <audio class="js-audio-player"></audio>
+
         </section>
 
         <section class="page reasons-section" data-page="reasons" data-nav-color="var(--bg-secondary)">
@@ -392,7 +498,10 @@
     <script type="module" src="js/timeline.js"></script>
     <script type="module" src="js/memories.js"></script>
     <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/favorites.js"></script>
+    <script type="module" src="/js/songs.js"></script>
     <script src="js/next-page.js"></script>
+    <script src="js/home.js"></script>
     <script src="js/data/time-together.js"></script>
 
 

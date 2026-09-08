@@ -15,6 +15,7 @@ function renderGallery() {
         img.alt = memory.title;
         title.textContent = memory.title;
         button.dataset.index = index;
+        button.style.setProperty("--rotation", memory.rotation);
 
         grid.appendChild(card);
     });

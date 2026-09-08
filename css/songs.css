@@ -1,0 +1,324 @@
+/* ========================================================================== */
+/* SONGS SECTION                                                              */
+/* ========================================================================== */
+
+.songs-section {
+    position: relative;
+}
+
+.songs-section .heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* PLAYLIST COVER */
+
+.songs-section .heading .album-cover {
+    aspect-ratio: 1;
+    height: 150px;
+    width: auto;
+    overflow: hidden;
+}
+
+.songs-section .heading .album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* PLAYLIST TITLE */
+
+.songs-section .heading .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.songs-section .heading .title h1,
+.songs-section .heading .title p {
+    font-family: var(--font-body);
+}
+
+.songs-section .heading .title h1 {
+    font-size: 2.3rem;
+    font-weight: 1000;
+}
+
+.songs-section .heading .title p {
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+
+
+/* ========================================================================== */
+/* SONG LIST                                                                  */
+/* ========================================================================== */
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* LABELS */
+
+.song-list .labels {
+    color: var(--text-muted);
+}
+
+
+/* GRID */
+
+.song-list .labels,
+.song-list .song-tile {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    align-items: center;
+
+    font-size: 0.8rem;
+    text-align: center;
+    padding-inline: 10px;
+}
+
+
+/* ALIGNMENT */
+
+.song-list .labels p:not(:last-child),
+.song-list .song-tile p:not(:last-child) {
+    text-align: left;
+}
+
+.song-list .labels p:nth-child(3),
+.song-list .song-tile p:nth-child(3) {
+    text-align: right;
+}
+
+
+/* SONG TILE */
+
+.song-list .song-tile {
+    width: 100%;
+    padding-block: 15px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--text-primary);
+    font: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    font-size: .8rem;
+}
+
+
+/* HOVER */
+
+.song-list .song-tile:hover {
+    background-color: var(--bg-secondary);
+}
+
+
+/* KEYBOARD FOCUS */
+
+.song-list .song-tile:focus-visible {
+    outline: 2px solid var(--accent-hot);
+    outline-offset: -2px;
+}
+
+
+/* ACTIVE / SELECTED SONG */
+
+.song-list .song-tile.is-active {
+    color: var(--accent-hot);
+    border-radius: 5px;
+}
+
+
+/* PLAYING SONG */
+
+.song-list .song-tile.is-playing {
+    color: var(--accent-hot);
+}
+
+
+/* SONG NUMBER */
+
+.song-tile .song-number {
+    color: var(--text-muted);
+}
+
+
+/* ACTIVE NUMBER */
+
+.song-tile.is-active .song-number {
+    color: inherit;
+}
+
+
+/* SONG TITLE */
+
+.song-tile .song-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================================================== */
+/* NOW PLAYING                                                                */
+/* ========================================================================== */
+
+.now-playing {
+    position: fixed;
+
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+
+    z-index: 50;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-secondary);
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* EMPTY STATE */
+
+.now-playing.is-empty {
+    opacity: 0.7;
+}
+
+
+/* SONG INFO */
+
+.now-playing .song-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* ALBUM COVER */
+
+.now-playing .album-cover {
+    height: 55px;
+    aspect-ratio: 1;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.now-playing .album-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* SONG TEXT */
+
+.now-playing .song {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+
+    line-height: 1;
+}
+
+
+.now-playing .song-title {
+    font-size: 0.8rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.now-playing .artist {
+    margin-top: 5px;
+
+    font-size: 0.7rem;
+
+    color: var(--text-muted);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* PLAY BUTTON */
+
+.now-playing .play-btn {
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--text-primary);
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.now-playing .play-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+}
+
+
+.now-playing .play-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* PLAYING STATE */
+
+.now-playing.is-playing .play-btn {
+    color: var(--accent-hot);
+}

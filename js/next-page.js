@@ -117,9 +117,30 @@ menuItems.forEach((item) => {
 
 /* NEXT BUTTONS */
 
+/* NEXT BUTTONS */
+
 document.querySelectorAll("[data-next]").forEach((btn) => {
 
-    btn.addEventListener("click", goToNextPage);
+    btn.addEventListener("click", () => {
+
+        // Move to the next page
+        goToNextPage();
+
+
+        // Play a song only if this button has data-play-song
+        if (btn.dataset.playSong !== undefined) {
+
+            document.dispatchEvent(
+                new CustomEvent("songs:play", {
+                    detail: {
+                        index: Number(btn.dataset.playSong)
+                    }
+                })
+            );
+
+        }
+
+    });
 
 });
 
