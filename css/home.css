@@ -52,7 +52,7 @@
     /* border: 1px red solid; */
 }
 
-.home-headline .date h1{
+.home-headline .date h1 {
     color: var(--text-muted);
     /* text-align: center; */
     font-size: 1.5rem;
@@ -66,6 +66,26 @@
 .home-headline p {
     font-family: var(--font-script);
     font-size: 1.5rem;
+}
+
+.home .hint {
+    position: absolute;
+    bottom: 20px;
+    z-index: 50;
+    inset-inline: 0;
+    
+    font-size: .7rem;
+
+    opacity: 0;
+    transform: translateY(100px);
+
+    transition: opacity .3s ease, transform .3s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 1000ms;
+}
+
+.home-section.is-active .home .hint {
+    opacity: .4;
+    transform: translateY(0);
 }
 
 
@@ -85,6 +105,8 @@
     filter: drop-shadow(7px 7px 8px rgba(0, 0, 0, .5));
     font-family: var(--font-script);
 
+    overflow: visible;
+
     transform: translateX(170px);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 1000ms;
@@ -92,4 +114,12 @@
 
 .home-section.is-active .next-page-btn {
     transform: translateX(0) rotate(-3deg);
+}
+
+.next-page-btn .hint{
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: -70%;
+    white-space: nowrap;
+    font-size: .9rem;
 }

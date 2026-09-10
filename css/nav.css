@@ -152,6 +152,8 @@ nav {
 
 .expand-menu ul li {
     padding: 10px 0px;
+    opacity: 0;
+    transition: opacity .3s ease;
 }
 
 /* ==========================================================================
@@ -168,12 +170,17 @@ nav {
 }
 
 .menu-open .expand-menu {
-    height: 75svh;
+    min-height: fit-content;
+    height: 80svh;
     padding: 10px 30px;
     opacity: 1;
     pointer-events: auto;
     /* border-bottom-left-radius: 10px; */
     /* border-bottom-right-radius: 10px; */
+}
+
+.menu-open  .expand-menu ul li{
+    opacity: 1;
 }
 
 .menu-open .menu-list {

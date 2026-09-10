@@ -34,7 +34,7 @@ export const favorites = [
 
     {
         type: "video",
-        src: "assets/videos/dates.mp4",
+        src: "assets/videos/majek.mp4",
         title: "3 - 2",
         description: "Jollidate + Game Night!",
         rotation: "-0.6deg"

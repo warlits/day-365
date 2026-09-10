@@ -1,9 +1,15 @@
 .us {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    height: 100%;
+    height: fit-content;
     overflow: hidden;
+    margin-top: 30px;
+}
+
+.us .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .us .heading h1 {
@@ -15,7 +21,6 @@
 
 .us .heading .subtext {
     text-align: center;
-    padding-block: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,13 +66,13 @@
 .counter-block__label {
     font-size: 0.8rem;
     color: var(--text-muted);
-    /* margin-top: 0.6rem; */
 }
 
 .us .bottom-text {
     text-align: center;
     font-family: var(--font-script);
     font-size: 1.2rem;
+    margin-top: 30px;
 }
 
 .bottom-canvas {
@@ -87,7 +92,7 @@
 }
 
 .bottom-canvas .carl {
-    transform: translateX(170px) translateY(62px);
+    transform: translateX(170px) translateY(10px);
     visibility: hidden;
 }
 
@@ -100,37 +105,37 @@
     /* Starting off-screen */
     0% {
         visibility: hidden;
-        transform: translateX(350px) translateY(62px) rotate(0deg);
+        transform: translateX(350px) translateY(10px) rotate(0deg);
     }
 
     /* Step 1 */
     25% {
         visibility: visible;
-        transform: translateX(305px) translateY(62px) rotate(-10deg);
+        transform: translateX(305px) translateY(10px) rotate(-10deg);
     }
 
     /* Step 2 */
     50% {
-        transform: translateX(260px) translateY(62px) rotate(10deg);
+        transform: translateX(260px) translateY(10px) rotate(10deg);
     }
 
     /* Step 3 */
     75% {
-        transform: translateX(215px) translateY(62px) rotate(-9deg);
+        transform: translateX(215px) translateY(10px) rotate(-9deg);
     }
 
     /* Step 4 — final position */
     100% {
         visibility: visible;
-        transform: translateX(170px) translateY(62px) rotate(0deg);
+        transform: translateX(170px) translateY(10px) rotate(0deg);
     }
 
 }
 
 
 .bottom-canvas .shula {
-    left: -10px;
-    bottom: -50px;
+    left: 0px;
+    bottom: 0;
     visibility: hidden;
 }
 

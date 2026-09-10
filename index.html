@@ -30,8 +30,23 @@
     <!-- SONGS -->
     <link rel="stylesheet" href="css/songs.css">
 
+    <!-- REASONS -->
+    <link rel="stylesheet" href="css/reasons.css">
 
+    <!-- FIRSTS -->
+    <link rel="stylesheet" href="css/firsts.css">
 
+    <!-- OPEN LETTER -->
+    <link rel="stylesheet" href="css/letter.css">
+
+    <!-- FUTURE -->
+    <link rel="stylesheet" href="css/future.css">
+
+    <!-- NEXT CHAPTER -->
+    <link rel="stylesheet" href="css/chapter.css">
+
+    <!-- ENDING -->
+    <link rel="stylesheet" href="css/ending.css">
 </head>
 
 <body>
@@ -105,7 +120,17 @@
 
                     <li class="item" data-page="future">
                         <div class="block"></div>
-                        <a href="#">Future Us</a>
+                        <a href="#">Us, Right Now</a>
+                    </li>
+
+                    <li class="item" data-page="chapter">
+                        <div class="block"></div>
+                        <a href="#">The Next Chapter</a>
+                    </li>
+
+                    <li class="item" data-page="ending">
+                        <div class="block"></div>
+                        <a href="#">Finally</a>
                     </li>
                 </ul>
             </div>
@@ -144,7 +169,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M10.02 6L8.61 7.41L13.19 12l-4.58 4.59L10.02 18l6-6l-6-6z" />
                         </svg>
+                        <span class="hint">click me! ⤵︎</span>
                     </div>
+                    <p class="hint">tap the button or swipe to navigate</p>
                 </div>
             </div>
         </section>
@@ -152,7 +179,7 @@
         <!-- /* ==========================================================================
         OUR TIME TOGETHER
         ========================================================================== */ -->
-        <section class="page" data-page="us" data-nav-color="var(--bg-secondary)">
+        <section class="page us-section" data-page="us" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="us">
                     <div class="heading">
@@ -202,8 +229,8 @@
                     </p>
                 </div>
                 <div class="bottom-canvas">
-                    <img src="assets/images/memories/carl.png" alt="" class="carl animate">
-                    <img src="assets/images/memories/shula.png" alt="" class="shula">
+                    <img src="assets/images/memories/cj.png" alt="" class="carl animate">
+                    <img src="assets/images/memories/shuls.png" alt="" class="shula">
                 </div>
             </div>
         </section>
@@ -225,10 +252,11 @@
 
                 <div class="timeline">
                     <div class="heading">
+                        <p class="heading__eyebrow">one month, one little chapter</p>
                         <h1>
                             A Month at a Time
                         </h1>
-                        <p class="subtext">
+                        <p class="heading__subtitle">
                             A little piece of us, every month.
                         </p>
                     </div>
@@ -258,11 +286,6 @@
 
         <section class="page gallery-section" data-page="gallery" data-nav-color="var(--bg-primary)">
             <div class="page-controls">
-                <!--                 <div class="next-page-btn" id="nextPageBtn" data-next>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M10.02 6L8.61 7.41L13.19 12l-4.58 4.59L10.02 18l6-6l-6-6z" />
-                    </svg>
-                </div> -->
 
                 <div class="floating-buttons ">
                     <button class="random-memory-btn" type="button" id="randomMemoryBtn">
@@ -280,11 +303,11 @@
             <div class="page-scroll">
                 <div class="memories">
                     <div class="heading">
+                        <p class="heading__eyebrow">proof that we're here ⋆ </p>
                         <h1>
-
-                            Our Gallery of Us
+                            The Moments That Made Our Story
                         </h1>
-                        <p>
+                        <p class="heading__subtitle">
                             we've been through a LOT, my love. let's look back on our favorite memories here.
                         </p>
                     </div>
@@ -313,11 +336,12 @@
             <div class="page-scroll">
                 <div class="favorites">
                     <div class="heading">
+                        <p class="heading__eyebrow">the things I keep coming back to</p>
                         <h1>
-                            My Favorite Things About Us
+                            My Favorite Things Abt Us
                         </h1>
-                        <p>
-                            the little things I never want to forget
+                        <p class="heading__subtitle">
+                            The little things, the big things, and everything in between.
                         </p>
                     </div>
                     <div class="favorites-wrapper" id="favoritesGrid"></div>
@@ -346,93 +370,89 @@
         <section class="page songs-section" data-page="songs" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="songs">
-
                     <!-- PLAYLIST HEADER -->
                     <div class="heading">
-
                         <div class="album-cover">
                             <img class="js-playlist-cover" src="/assets/images/memories/carnations.jpg"
                                 alt="Our Songs playlist cover">
                         </div>
-
                         <div class="title">
                             <p class="playlist-type">
                                 Playlist
                             </p>
-
                             <h1 class="js-playlist-title">
                                 Our Songs
                             </h1>
-
                             <p class="js-song-count">
                                 0 songs
                             </p>
                         </div>
-
                     </div>
-
 
                     <!-- SONG LIST -->
                     <div class="song-list">
-
                         <div class="labels">
                             <p>#</p>
                             <p>Title</p>
                             <p>Duration</p>
                         </div>
-
                         <!-- SONGS GENERATED BY JS -->
                         <div class="js-song-list" aria-label="Playlist songs"></div>
-
                     </div>
-
                 </div>
             </div>
 
 
             <!-- NOW PLAYING -->
             <div class="now-playing js-now-playing">
-
                 <div class="song-info">
-
                     <div class="album-cover">
                         <img class="js-now-playing-cover" src="/assets/images/memories/carnations.jpg" alt="">
                     </div>
-
                     <div class="song">
-
                         <p class="song-title js-now-playing-title">
                             Select a song
                         </p>
-
                         <p class="artist js-now-playing-artist">
                             —
                         </p>
-
                     </div>
-
                 </div>
-
-
                 <button class="play-btn js-play-btn" type="button" aria-label="Play" disabled>
                     <span class="js-play-icon">▶</span>
                 </button>
-
             </div>
-
-
             <!-- SINGLE GLOBAL AUDIO PLAYER -->
-            <audio class="js-audio-player"></audio>
-
+            <audio class="js-audio-player" preload="auto"></audio>
         </section>
+
+
+        <!-- /* ==========================================================================
+        TIMELINE
+        ========================================================================== */ -->
 
         <section class="page reasons-section" data-page="reasons" data-nav-color="var(--bg-secondary)">
             <div class="page-scroll">
                 <div class="reasons">
                     <div class="heading">
-                        <h1>
-                            Reasons I Love You
-                        </h1>
+                        <p class="heading__eyebrow">as if I could ever fit them all here :P</p>
+                        <h1>Reasons why I love you</h1>
+                        <p class="heading__subtitle">There are too many reasons—but somehow, they always lead back to
+                            you.</p>
+                    </div>
+
+                    <div class="stack-wrap">
+                        <div class="behind two"></div>
+                        <div class="behind one"></div>
+                        <div class="card-top" id="cardTop">
+                            <p id="cardText"></p>
+                        </div>
+                    </div>
+                    <div class="hint">tap the card or click next</div>
+
+                    <div class="controls">
+                        <button id="nextBtn">Next</button>
+                        <span class="count" id="count"></span>
                     </div>
                 </div>
             </div>
@@ -442,35 +462,419 @@
             <div class="page-scroll">
                 <div class="firsts">
                     <div class="heading">
-                        <h1>
-                            Where It All Began
-                        </h1>
+                        <span class="heading__eyebrow">a letter from our beginning ♡</span>
+                        <h1>Where It All Began</h1>
+                        <p class="heading__subtitle">Our firsts, little by little, becoming our story.</p>
                     </div>
+
+                    <div class="firsts-letter">
+                        <div class="firsts-letter__top"><span>DEAR US,</span><span>chapter one</span></div>
+                        <p class="firsts-letter__intro">Before there were hundreds of memories, there were these tiny
+                            firsts. Some were planned. Some just happened. All of them stayed.</p>
+                        <div id="firstsList" class="firsts-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <template id="firstItemTemplate">
+                <article class="first-item">
+                    <div class="first-item__marker" aria-hidden="true"><span class="first-item__number"></span><span
+                            class="first-item__dot"></span></div>
+                    <div class="first-item__content">
+                        <article class="first-note" data-type="text" hidden>
+                            <span class="first-note__tape" aria-hidden="true"></span>
+                            <div class="first-note__meta"><span class="first-note__label"></span><span
+                                    class="first-note__date"></span></div>
+                            <h2 class="first-note__title"></h2>
+                            <p class="first-note__description"></p>
+                            <span class="first-note__scribble">keep this one ♡</span>
+                        </article>
+
+                        <article class="first-polaroid" data-type="media" hidden>
+                            <span class="first-polaroid__tape" aria-hidden="true"></span>
+                            <div class="first-polaroid__media">
+                                <img class="first-polaroid__image" alt="" hidden>
+                                <div class="first-polaroid__video-wrap" hidden>
+                                    <video class="first-polaroid__video" preload="metadata" playsinline></video>
+                                    <button class="first-polaroid__play" type="button"
+                                        aria-label="Play video"><span>▶</span></button>
+                                </div>
+                            </div>
+                            <div class="first-polaroid__caption">
+                                <span class="first-polaroid__label"></span>
+                                <h2 class="first-polaroid__title"></h2>
+                                <p class="first-polaroid__description"></p>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </template>
+
+            <div class="firsts-lightbox" id="firstsLightbox" aria-hidden="true">
+                <div class="firsts-lightbox__backdrop" data-close-lightbox></div>
+                <div class="firsts-lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+                    <button class="firsts-lightbox__close" id="lightboxClose" type="button"
+                        aria-label="Close image">×</button>
+                    <img id="lightboxImage" class="firsts-lightbox__image" alt="">
+                    <span id="lightboxLabel" class="firsts-lightbox__label"></span>
+                    <h2 id="lightboxTitle"></h2>
+                    <p id="lightboxDescription"></p>
                 </div>
             </div>
         </section>
 
         <section class="page openLetter-section" data-page="openLetter" data-nav-color="var(--text-primary)">
+
             <div class="page-scroll">
+
                 <div class="open-letter">
+
+                    <!-- Section Heading -->
                     <div class="heading">
+
+                        <p class="heading__eyebrow">
+                            if I could put my heart into words
+                        </p>
+
                         <h1>
                             A Letter For You
                         </h1>
+
+                        <p class="heading__subtitle">
+                            For all the things I mean when simply saying
+                            "I love you" isn't enough.
+                        </p>
+
                     </div>
+
+
+                    <!-- Letter Interaction -->
+                    <div class="open-letter__content">
+
+                        <!-- Envelope -->
+                        <div class="letter-envelope" id="letterEnvelope" role="button" tabindex="0"
+                            aria-label="Open the letter">
+
+                            <svg viewBox="0 0 220 140" width="220" height="140" aria-hidden="true">
+
+                                <rect x="6" y="8" width="208" height="122" rx="6" />
+
+                                <path d="M6 14 L110 92 L214 14" />
+
+                            </svg>
+
+                            <div class="letter-tape"></div>
+
+                            <div class="letter-seal">
+
+                                <i class="ti ti-heart" aria-hidden="true"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Letter Card -->
+                        <article class="letter-card hidden" id="letterCard" role="button" tabindex="0"
+                            aria-label="Close the letter">
+
+                            <div class="letter-card-tape"></div>
+
+                            <p class="letter-greeting">
+                                Dear you,
+                            </p>
+
+                            <p class="letter-message">
+                                Every month with you has felt like its own small
+                                chapter. This page is just for the two of us —
+                                a little note, whenever you need to hear it.
+                            </p>
+
+                            <p class="letter-signature">
+                                — always yours
+                            </p>
+
+                        </article>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <section class="page future-section" data-page="future" data-nav-color="var(--bg-primary)">
             <div class="page-scroll">
                 <div class="future">
                     <div class="heading">
-                        <h1>
-                            To Our Future Selves
-                        </h1>
+                        <p class="heading__eyebrow">a little piece of us, exactly as we are</p>
+                        <h1>Us, Right Now</h1>
+                        <p class="heading__subtitle">A snapshot of this moment, so someday we can remember exactly who
+                            we were.</p>
+                    </div>
+
+                    <div class="future__content">
+                        <div class="us-now">
+                            <div class="snapshot-preview">
+                                <div class="snapshot-polaroid" id="snapshotPolaroid">
+                                    <div class="snapshot-photo">
+                                        <img id="usNowPhotoPreview" alt="Our snapshot">
+                                        <div class="snapshot-photo__placeholder">
+                                            <i class="ti ti-camera"></i>
+                                            <span>our photo goes here</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="snapshot-caption">
+                                        <p class="snapshot-caption__note" id="usNowNotePreview"></p>
+                                        <p class="snapshot-caption__date" id="usNowDate"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="snapshot-controls">
+                                <div class="snapshot-step">
+                                    <div class="snapshot-step__number">1</div>
+
+                                    <div class="snapshot-step__content">
+                                        <p class="snapshot-step__title">Add a photo of us</p>
+
+                                        <label class="snapshot-upload">
+                                            <input type="file" id="usNowPhotoInput" accept="image/*"
+                                                capture="environment">
+
+                                            <i class="ti ti-camera"></i>
+                                            Take a photo
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="snapshot-step">
+                                    <div class="snapshot-step__number">2</div>
+
+                                    <div class="snapshot-step__content">
+                                        <p class="snapshot-step__title">Write a little note for this moment</p>
+
+                                        <textarea class="snapshot-note-input" id="usNowNoteInput"
+                                            placeholder="Something we'll want to remember about us right now..."
+                                            maxlength="120"></textarea>
+
+                                        <p class="snapshot-note-count" id="snapshotNoteCount"></p>
+                                    </div>
+                                </div>
+
+                                <div class="snapshot-step">
+                                    <div class="snapshot-step__number">3</div>
+
+                                    <div class="snapshot-step__content">
+                                        <p class="snapshot-step__title">Keep this version of us</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="snapshot-save-button" id="saveSnapshotButton" type="button">
+                                <i class="ti ti-download"></i>
+                                Save Our Snapshot
+                            </button>
+
+                            <p class="snapshot-footer">
+                                You can always come back and create another little snapshot.
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="page chapter-section" data-page="chapter" data-nav-color="var(--text-primary)">
+            <div class="page-scroll">
+                <div class="chapter">
+                    <div class="heading">
+                        <p class="heading__eyebrow">our favorite part is that we're not done yet</p>
+                        <h1>The Next Chapter</h1>
+                        <p class="heading__subtitle">A few things we're still dreaming about, waiting for, and hoping to
+                            make happen together.</p>
+                    </div>
+
+                    <div class="chapter__content">
+                        <!-- Preview -->
+                        <div class="chapter-preview">
+                            <div class="chapter-card-wrapper">
+                                <div class="chapter-card" id="chapterCard">
+                                    <div class="chapter-card__tape"></div>
+                                    <p class="chapter-card__eyebrow">OUR NEXT CHAPTER</p>
+                                    <h2 class="chapter-card__title">Things We're Going to Do</h2>
+                                    <p class="chapter-card__date" id="chapterDate"></p>
+                                    <div class="chapter-card__divider">
+                                        <span></span>
+                                        <i class="ti ti-heart" aria-hidden="true">♡</i>
+                                        <span></span>
+                                    </div>
+                                    <div class="chapter-list" id="chapterPreviewList">
+                                        <p class="chapter-list__empty">Our next chapter is still waiting to be written.
+                                        </p>
+                                    </div>
+                                    <div class="chapter-card__divider">
+                                        <span></span>
+                                        <i class="ti ti-sparkles" aria-hidden="true">⟡</i>
+                                        <span></span>
+                                    </div>
+                                    <p class="chapter-card__footer">One day, we'll look back and realize we did it all.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Builder -->
+                        <div class="chapter-builder">
+                            <div class="chapter-builder__intro">
+                                <p>Write down the things we want to make happen.</p>
+                            </div>
+
+                            <!-- Places -->
+                            <div class="chapter-category">
+                                <div class="chapter-category__heading">
+                                    <i class="ti ti-plane" aria-hidden="true"></i>
+                                    <div>
+                                        <p class="chapter-category__eyebrow">somewhere new</p>
+                                        <h2>Places We'll Go</h2>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-input-row">
+                                    <input type="text" class="chapter-item-input" data-category="places"
+                                        placeholder="Somewhere we want to go..." maxlength="60">
+
+                                    <button class="chapter-add-button" data-category="places" type="button"
+                                        aria-label="Add place">
+                                        <p class="ti ti-plus">Add</p>
+                                    </button>
+                                </div>
+
+                                <div class="chapter-items" data-list="places"></div>
+                            </div>
+
+                            <!-- Things -->
+                            <div class="chapter-category">
+                                <div class="chapter-category__heading">
+                                    <i class="ti ti-heart" aria-hidden="true"></i>
+                                    <div>
+                                        <p class="chapter-category__eyebrow">more memories waiting</p>
+                                        <h2>Things We'll Do</h2>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-input-row">
+                                    <input type="text" class="chapter-item-input" data-category="things"
+                                        placeholder="Something we want to do..." maxlength="60">
+
+                                    <button class="chapter-add-button" data-category="things" type="button"
+                                        aria-label="Add activity">
+                                        <p class="ti ti-plus">Add</p>
+                                    </button>
+                                </div>
+
+                                <div class="chapter-items" data-list="things"></div>
+                            </div>
+
+                            <!-- Dreams -->
+                            <div class="chapter-category">
+                                <div class="chapter-category__heading">
+                                    <i class="ti ti-sparkles" aria-hidden="true"></i>
+                                    <div>
+                                        <p class="chapter-category__eyebrow">what we're growing toward</p>
+                                        <h2>Dreams We'll Chase</h2>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-input-row">
+                                    <input type="text" class="chapter-item-input" data-category="dreams"
+                                        placeholder="Something we're dreaming about..." maxlength="60">
+
+                                    <button class="chapter-add-button" data-category="dreams" type="button"
+                                        aria-label="Add dream">
+                                        <p class="ti ti-plus">Add</p>
+                                    </button>
+                                </div>
+
+                                <div class="chapter-items" data-list="dreams"></div>
+                            </div>
+
+                            <button class="chapter-save-button" id="saveChapterButton" type="button">
+                                <i class="ti ti-download"></i>
+                                Save Our Next Chapter
+                            </button>
+
+                            <p class="chapter-footer">
+                                Print it, keep it, and come back to mark the things you've made happen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page ending-section" data-page="ending" data-nav-color="var(--text-primary)">
+            <div class="page-scroll">
+
+                <div class="ending">
+
+                    <!-- Section Heading -->
+                    <div class="heading">
+
+                        <p class="heading__eyebrow">
+                            one last thing
+                        </p>
+
+                        <h1>
+                            And somehow,<br>
+                            it always comes back to us.
+                        </h1>
+
+                        <p class="heading__subtitle">
+                            Every moment, every memory, every version of us—
+                            all leading back to this.
+                        </p>
+
+                    </div>
+
+                    <!-- Final Snapshot -->
+                    <div class="ending-snapshot">
+
+                        <div class="ending-polaroid" id="endingPolaroid">
+
+                            <div class="ending-photo">
+
+                                <img id="endingTakenPhoto" alt="Our saved snapshot">
+
+                                <!-- Empty Placeholder -->
+                                <div class="ending-photo__placeholder">
+
+                                    <i class="ti ti-camera" aria-hidden="true"></i>
+
+                                    <span>
+                                        our snapshot goes here
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ending-caption">
+
+                                <p>
+                                    <!-- Still us. Always. -->
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </div> <!-- closes .page-wrapper -->
@@ -500,6 +904,14 @@
     <script type="module" src="js/nav.js"></script>
     <script type="module" src="js/favorites.js"></script>
     <script type="module" src="/js/songs.js"></script>
+    <script type="module" src="/js/firsts.js"></script>
+    <script type="module" src="/js/letter.js"></script>
+    <script type="module" src="/js/future.js"></script>
+    <script type="module" src="/js/ending.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="/js/chapter.js"></script>
+    <script src="/js/data/reasons-data.js"></script>
+    <script src="/js/reasons.js"></script>
     <script src="js/next-page.js"></script>
     <script src="js/home.js"></script>
     <script src="js/data/time-together.js"></script>
