@@ -224,8 +224,24 @@
     padding: 12px 12px 20px;
     background: #f4ecd9;
     box-shadow: 0 14px 35px rgba(42, 27, 56, .18);
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
 }
+
+@media (max-width: 400px) {
+    .future-section .snapshot-preview {
+        width: 100%;
+    }
+    .future-section .snapshot-polaroid {
+        transform: rotate(.7deg) translateX(3px);
+    }
+}
+
+@media (max-width: 360px) {
+    .future-section .snapshot-polaroid {
+        transform: rotate(.5deg);
+    }
+}
+
 
 .future-section .snapshot-photo {
     position: relative;

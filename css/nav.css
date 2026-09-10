@@ -140,7 +140,7 @@ nav {
 
     border-radius: 10px;
 
-    transition: height .5s ease, opacity .3s ease;
+    transition: height .5s ease, opacity .3s ease, height .5s ease;
     transition-delay: 250ms;
 }
 
@@ -151,7 +151,7 @@ nav {
 }
 
 .expand-menu ul li {
-    padding: 10px 0px;
+    padding: 5px 0px;
     opacity: 0;
     transition: opacity .3s ease;
 }
@@ -171,7 +171,7 @@ nav {
 
 .menu-open .expand-menu {
     min-height: fit-content;
-    height: 80svh;
+    height: 65svh;
     padding: 10px 30px;
     opacity: 1;
     pointer-events: auto;

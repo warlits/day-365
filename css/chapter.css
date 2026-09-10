@@ -42,14 +42,26 @@
 
 .chapter-section .chapter__content {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px white solid; */
 }
 
 .chapter-section .chapter-preview {
     display: flex;
     justify-content: center;
     width: 100%;
+    align-items: center;
+}
+
+@media (max-width: 370px) {
+    .chapter-section .chapter-preview {
+        width: 90%;
+        align-self: center;
+    }
 }
 
 /* ==========================================================================
@@ -217,6 +229,8 @@
 
 .chapter-section .chapter-builder {
     margin-top: 52px;
+    width: 90%;
+    /* border: 1px red solid; */
 }
 
 .chapter-section .chapter-builder__intro {

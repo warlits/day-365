@@ -51,6 +51,7 @@
 
     width: 100%;
     margin-top: 48px;
+    margin-bottom: 50px;
 }
 
 
@@ -68,6 +69,26 @@
 
     transform: rotate(2deg);
 }
+
+@media (max-width: 400px) {
+    .ending-snapshot {
+        width: 97%;
+    }
+    .ending-polaroid {
+        transform: rotate(.7deg) translateX(5px);
+    }
+}
+
+@media (max-width: 360px) {
+    .ending-snapshot {
+        width: 98%;
+    }
+    .ending-polaroid {
+        transform: rotate(.7deg) translateX(4px);
+    }
+}
+
+
 
 
 /* PHOTO AREA */
