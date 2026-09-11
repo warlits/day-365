@@ -1,0 +1,157 @@
+[
+  {
+    "title": "Your Song",
+    "artist": "Parokya Ni Edgar",
+    "cover": "./assets/songs/your-song.webp"
+  },
+  {
+    "title": "huling uwayi ko, sinta",
+    "artist": "Ian Quiruz",
+    "cover": "./assets/songs/huling-uwayi-ko-sinta.webp"
+  },
+  {
+    "title": "ang balikat at baywang",
+    "artist": "Ian Quiruz",
+    "cover": "./assets/songs/ang-balikat-at-baywang.webp"
+  },
+  {
+    "title": "Sleep Well",
+    "artist": "d4vd",
+    "cover": "./assets/songs/sleep-well.webp"
+  },
+  {
+    "title": "Here With Me",
+    "artist": "d4vd",
+    "cover": "./assets/songs/here-with-me.webp"
+  },
+  {
+    "title": "Those Eyes",
+    "artist": "New West",
+    "cover": "./assets/songs/those-eyes.webp"
+  },
+  {
+    "title": "Look After You",
+    "artist": "The Fray",
+    "cover": "./assets/songs/look-after-you.webp"
+  },
+  {
+    "title": "Iris",
+    "artist": "The Goo Goo Dolls",
+    "cover": "./assets/songs/iris.webp"
+  },
+  {
+    "title": "You'll Be Safe Here",
+    "artist": "Rico Blanco",
+    "cover": "./assets/songs/youll-be-safe-here.webp"
+  },
+  {
+    "title": "Kiss Me",
+    "artist": "Sixpence None the Richer",
+    "cover": "./assets/songs/kiss-me.webp"
+  },
+  {
+    "title": "this is what slow dancing feels like",
+    "artist": "JVKE",
+    "cover": "./assets/songs/this-is-what-slow-dancing-feels-like.webp"
+  },
+  {
+    "title": "Dissolve",
+    "artist": "Absofacto, NITESHIFT",
+    "cover": "./assets/songs/dissolve.webp"
+  },
+  {
+    "title": "Pancit (ft. Janine Berdin)",
+    "artist": "juan karlos, Janine Berdin",
+    "cover": "./assets/songs/pancit.webp"
+  },
+  {
+    "title": "i'd find you",
+    "artist": "prendste",
+    "cover": "./assets/songs/id-find-you.webp"
+  },
+  {
+    "title": "A Different Kind Of Love",
+    "artist": "Anthony Lazaro",
+    "cover": "./assets/songs/a-different-kind-of-love.webp"
+  },
+  {
+    "title": "(They Long To Be) Close To You",
+    "artist": "Carpenters",
+    "cover": "./assets/songs/they-long-to-be-close-to-you.webp"
+  },
+  {
+    "title": "You're Beautiful",
+    "artist": "James Blunt",
+    "cover": "./assets/songs/youre-beautiful.webp"
+  },
+  {
+    "title": "You Needed Me",
+    "artist": "Anne Murray",
+    "cover": "./assets/songs/you-needed-me.webp"
+  },
+  {
+    "title": "You",
+    "artist": "Basil Valdez",
+    "cover": "./assets/songs/you.webp"
+  },
+  {
+    "title": "Out of the Blue",
+    "artist": "Michael Learns To Rock",
+    "cover": "./assets/songs/out-of-the-blue.webp"
+  },
+  {
+    "title": "The Search Is Over",
+    "artist": "Survivor",
+    "cover": "./assets/songs/the-search-is-over.webp"
+  },
+  {
+    "title": "Make It with You",
+    "artist": "Bread",
+    "cover": "./assets/songs/make-it-with-you.webp"
+  },
+  {
+    "title": "You Made Me Live Again",
+    "artist": "Janet Basco",
+    "cover": "./assets/songs/you-made-me-live-again.webp"
+  },
+  {
+    "title": "Aphrodite",
+    "artist": "The Ridleys",
+    "cover": "./assets/songs/aphrodite.webp"
+  },
+  {
+    "title": "Sway",
+    "artist": "Bic Runga",
+    "cover": "./assets/songs/sway.webp"
+  },
+  {
+    "title": "More Than Words",
+    "artist": "Extreme",
+    "cover": "./assets/songs/more-than-words.webp"
+  },
+  {
+    "title": "To the Bone",
+    "artist": "Pamungkas",
+    "cover": "./assets/songs/to-the-bone.webp"
+  },
+  {
+    "title": "You Make Me Feel Brand New",
+    "artist": "Simply Red",
+    "cover": "./assets/songs/you-make-me-feel-brand-new.webp"
+  },
+  {
+    "title": "If",
+    "artist": "Bread",
+    "cover": "./assets/songs/if.webp"
+  },
+  {
+    "title": "About You",
+    "artist": "The 1975",
+    "cover": "./assets/songs/about-you.webp"
+  },
+  {
+    "title": "Captivated",
+    "artist": "IV OF SPADES",
+    "cover": "./assets/songs/captivated.webp"
+  }
+]

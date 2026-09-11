@@ -4,6 +4,7 @@
 
 .songs-section {
     position: relative;
+    padding-bottom: 100px;
 }
 
 .songs-section .heading {

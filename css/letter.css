@@ -1,6 +1,7 @@
 .openLetter-section {
     width: min(100%, 760px);
     padding: 68px 20px 0px;
+    margin-bottom: 100px;
 }
 
 .openLetter-section .heading {
